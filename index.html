@@ -11,29 +11,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+   <!-- FONTawesome -->
+   <script defer src="/node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
   </head>
   <body>
     
     <header>
       <section class="primary-header">
         <div class="container">
-         <a href="#"><img src="./img/ITON.svg" alt="LOGO"></a>
-         <img src="./img/menu.svg" alt="menu">
-          <nav>
-           <ul role='list'>
-            <li><a href="#">PROJECT</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
-            <li><img src="./img/noto_sun.png" alt="sun/moon"></li>
-           </ul>
-          </nav>
+          <div class="main-header">
+           <a href="#" class="logo" ><img src="./img/ITON.svg" alt="LOGO"></a>
+           <i class="fa-solid fa-bars menu-btn hideThis" onclick="hideNavBar()"></i>
+           <div id="main-menu nav">
+              <ul role="list" class="primary-nav hide">
+                <li><a href="#">Project</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><i class="fa-solid fa-sun"></i></li>
+              </ul>
+          </div>
+          </div>
+         
         </div>
       </section>
     </header>
         
+
     <main>
-
-
       <section class="main-section">
         <div class="container">
           <div class="even-columns">
@@ -145,6 +149,6 @@
 
 
 
-    <script type="module" src="/main.js"></script>
+    <script src="/main.js"></script>
   </body>
 </html>
