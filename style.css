@@ -7,6 +7,10 @@
   --clr-neutral-700: #333333;
   --clr-neutral-800: #202020;
 
+  --clr-background: var(--clr-neutral-700);
+  --clr-foreground: var(--clr-neutral-100);
+
+
   --ff-primary: 'Poppins', sans-serif;
 
   --ff-body: var(--ff-primary);
@@ -31,11 +35,14 @@
   --fs-button: var(--fs-400);
 }
 
+
+
 @media (min-width: 50em) {
   :root{ 
     --fs-primary-heading: var(--fs-650);
     --fs-secondary-heading: var(--fs-550);
   }
+  
 }
 
 /* Box sizing rules */
@@ -72,10 +79,17 @@ body {
 body {
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: var(--clr-neutral-800);
+  background: var(--clr-background);
+  color: var(--clr-foreground);
   font-family: var(--ff-primary);
 
 }
+
+.lightmode {
+  --clr-background: var(--clr-neutral-100);
+  --clr-foreground: var(--clr-neutral-700);
+}
+
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
@@ -112,7 +126,7 @@ svg {
 
 /* Utility Clases */
 
-.text-accent-400 {
+/* .text-accent-400 {
   color: var(--clr-accent-400);
 }
 
@@ -150,7 +164,7 @@ svg {
 
 .bg-neutral-800 {
   background-color: var(--clr-neutral-800);
-}
+} */
 
 .fw-bold { font-weight: var(--fw-bold);}
 .fw-semi-bold { font-weight: var(--fw-semi-bold);}
@@ -165,35 +179,42 @@ svg {
   font-size: var(--fs-secondary-heading);
 }
 
+/* .container {
+ width: 1633px;
+  
+ } */
 
 
 /* PRIMARY NAV */
 
 .primary-header{
   margin: 1rem ;
+  width: 100%
 }
-
-
 
  .main-header {
     display: grid;
-    justify-content: space-between; 
-    grid-template-columns: auto auto ;
-    text-align: center;
+    justify-content: space-between;
+    grid-template-columns: auto auto;
+    /* text-align: center; */
+    
 } 
 
+.logo {
+  color: var(--clr-foreground);
+}
+
 .menu-btn {
-  color: var(--clr-neutral-100);
+  color: var(--clr-foreground);
   font-size: 2.25rem;
 }
 .menu-btn:hover,
 .menu-btn:focus {
-  background: var(--clr-neutral-700);
   color: var(--clr-accent-400);
 }
 
 .primary-nav a{
-  color: var(--clr-neutral-100);
+  color: var(--clr-foreground);
   font-weight: var(--fw-ligt);
   text-decoration: none;
   text-transform:uppercase; 
@@ -208,17 +229,21 @@ svg {
   padding: .5rem .5rem .5rem 0;
 }
 
-
-
- @media (min-width: 768px) {
-  .hideThis {
-    display: none;
-  }
-
-
+.fa-toggle-off {
+  color: var(--clr-light);
 }
 
- @media (max-width: 768px) {
+.fa-toggle-on {
+  color: var(--clr-dark);
+}
+
+ @media (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+}
+
+ @media (max-width: 767px) {
   .hide  {
     display: none;
   }
