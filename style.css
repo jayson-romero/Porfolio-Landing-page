@@ -208,8 +208,7 @@ svg {
   color: var(--clr-foreground);
   font-size: 2.25rem;
 }
-.menu-btn:hover,
-.menu-btn:focus {
+.menu-btn:hover {
   color: var(--clr-accent-400);
 }
 
@@ -229,12 +228,14 @@ svg {
   padding: .5rem .5rem .5rem 0;
 }
 
-.fa-toggle-off {
-  color: var(--clr-light);
+.light-mode-toggle{
+  background: transparent;
+  border: none;
 }
 
-.fa-toggle-on {
-  color: var(--clr-dark);
+.fa-toggle-off, 
+.fa-toggle-on{
+  color: var(--clr-foreground);
 }
 
  @media (min-width: 768px) {
