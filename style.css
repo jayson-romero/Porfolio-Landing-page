@@ -258,63 +258,56 @@ margin: auto;
 
 .main-section {
   position: relative;
+  display: flex;
+  justify-content: center;
+
+  
 }
 
 .even-columns {
- position: relative;
- width: 100%;
-}
-
- .intro-text {
-   position: absolute;
-   top: 50%;
-   width: 100%; 
-   text-align: center;
-} 
-
+  position: relative;
 
   
-
-
-
-
-
-@media only screen and (min-width: 586px){
-
- .even-columns {
-   position: static;
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   margin: 5.4375rem 0 10.4375rem; 
-   width: 100%;
-  }
-
-  
-  .intro-text {
-   position: static;
  
-  
-}
-
-
-  
-
-
-}
-
- @media only screen and (max-width: 585px){
-
-.social-media ul li svg {
- color: var(--clr-neutral-100);
-}
-
-.intro-text {
- color: var(--clr-neutral-100);
-
-}
-
 } 
+
+  .intro-text {
+ 
+   position: absolute;
+   display: flex;
+   justify-content:center;
+   flex-direction: column;
+   width: 100%; 
+   align-items: center;
+   top: 50%;
+
+  
+}  
+
+
+
+@media only screen and (min-width: 768px){
+
+  .container {
+    width: 100%;
+   }
+
+  .even-columns {
+    position: static;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: end;
+    
+  } 
+
+  .intro-text {
+    position: static;
+    
+  }
+ 
+
+ }
+
 
 
 
@@ -322,43 +315,59 @@ margin: auto;
 
 /* Social Medaia */
 .social-media ul{
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
 }
 
 .social-media ul li {
-  list-style: none;
-  margin: 1.6875rem; 
- 
+list-style: none;
+margin: 1.6875rem; 
+
 }
 
 .social-media ul li svg {
-  color: var(--clr-foreground);
-  
+color: var(--clr-foreground);
+
 }
 
 .social-media ul li svg:hover {
-  color: var(--clr-accent-400);
- 
-}
+color: var(--clr-accent-400);
+
+} 
 
 
-/* arousel-button */
+/* Carousel-button */
 .carousel-btn {
-  display: none;
+display: none;
 } 
 .carousel-btn li {
-  list-style: none;
+list-style: none;
 }
 
-
 .carousel-btn .fa-circle.active{
+color: var(--clr-accent-400);
+
+} 
+
+span {
   color: var(--clr-accent-400);
- 
 } 
 
 
+ @media only screen and (max-width: 585px){
+
+  
+.social-media ul li svg {
+ color: var(--clr-neutral-100);
+}
+
+.intro-text {
+ color: var(--clr-neutral-100);
+
+} 
+
+} 
 
 
 @media only screen and (min-width: 1048px){
@@ -381,13 +390,14 @@ margin: auto;
   padding: 1.6875rem;
 }
 
+
+.intro-text {
+  margin-left: 20px;
+}
+
 }
 
 
   
 
-
-span {
-  color: var(--clr-accent-400);
-}
 
