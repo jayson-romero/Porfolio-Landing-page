@@ -13,11 +13,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
    <!-- FONTawesome -->
    <script defer src="/node_modules/@fortawesome/fontawesome-free/js/all.js"></script>
+    <!-- JQuery -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
-  <body class="">
+  <body>
     
     <header>
-      <section class="primary-header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo fs-lg-bold fs-logo"><a href="#">ITON</a></div>
+                <ul class="menu fw-light-bold">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Portfolio</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Contact</a></li>
+                  <li><button id="light-mode-toggle" class="light-mode-toggle" ><i class="fa-solid fa-toggle-off" id="toggle-icon"></i></button></li>
+                </ul>
+                <div class="menu-btn"><i class="fa-solid fa-bars" id="menu-btns"></i></div>
+            </div>
+        </nav>
+      
+
+      <section class="home" id="home">
+            <div class="container">
+                  <div class="home-content">
+                        <div class="text-1 fs-primary-heading fw-bold"><span>JAYSON </span>ROMERO</div>
+                        <div class="text-1 fs-secondary-heading fw-light-bold">I am <span>Web Developer</span></div>
+                  </div>
+            </div>
+            <img id="menu-bg" src="img/bg-dark-big.jpg" alt="">
+      </section>  
+      
+      
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit enim explicabo asperiores deserunt, repudiandae pariatur inventore. Minima voluptatibus veniam nihil adipisci officiis tempora temporibus quo incidunt iure maiores minus rerum dignissimos vero cum reiciendis voluptatum, dolore alias aliquam dolorem odio tempore nulla sed? Libero consectetur earum molestias! Repellendus voluptate consectetur ex veniam perferendis facilis quas odit ullam quidem veritatis pariatur doloremque recusandae sint, iure quod harum accusamus. Perspiciatis obcaecati adipisci corporis autem nam cumque, amet at quaerat culpa dolorem vitae nihil explicabo officiis repellendus deleniti dignissimos quasi hic corrupti voluptatem earum ullam quae soluta aspernatur dicta. Quod impedit culpa ut veniam provident earum atque necessitatibus. Ut, cumque quidem rerum sit rem veniam magni omnis odio recusandae. Corporis harum doloremque nostrum saepe et, culpa tempora. Voluptatum voluptatibus veniam cumque ex? Sequi quibusdam aliquid voluptatum voluptates ab quidem doloremque tempora est eius cumque debitis ipsam enim, fugiat consequatur nisi quam modi amet nobis reprehenderit corporis blanditiis, eos voluptatem. Eum quod, esse nulla explicabo, magnam quae quibusdam, voluptatum nihil possimus quaerat labore dolorem nam rerum omnis odit inventore. Exercitationem ducimus, molestiae praesentium itaque nisi, delectus illo alias sit incidunt ipsa recusandae facilis officiis? Nesciunt alias nemo cum quia placeat temporibus minus ad velit!</p>
+      
+      
+      
+      <!-- <section class="primary-header">
         <div class="container">
           <div class="main-header">
            <a href="#" class="logo"><svg width="85" height="27" viewBox="0 0 85 27"  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -36,151 +68,19 @@
           </div>
          
         </div>
-      </section>
+      </section> -->
     </header>
         
 
-    <main>
-      <section class="main-section">
-        <div class="container">
-          <div class="even-columns">
-            
-            <div class="intro-text">
-             <h1 class="fs-primary-heading text-accent-400 fw-bold"><span>JAYSON</span> ROMERO</h1>
-             <h5 class="fs-secondary-heading text-accent-400 fw-semibold">I’m a <span>Web Developer</span></h5>
-              
-             <div class="social-media">
-              <ul>
-                <li><a href="#"><svg width="31" height="31" viewBox="0 0 31 31" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M21.1508 4.19772C22.6483 4.20219 24.0832 4.79904 25.1421 5.85792C26.201 6.91681 26.7978 8.35168 26.8023 9.84916V21.1508C26.7978 22.6483 26.201 24.0832 25.1421 25.1421C24.0832 26.201 22.6483 26.7978 21.1508 26.8023H9.84916C8.35168 26.7978 6.91681 26.201 5.85792 25.1421C4.79904 24.0832 4.20219 22.6483 4.19772 21.1508V9.84916C4.20219 8.35168 4.79904 6.91681 5.85792 5.85792C6.91681 4.79904 8.35168 4.20219 9.84916 4.19772H21.1508ZM21.1508 1.9375H9.84916C5.49766 1.9375 1.9375 5.49766 1.9375 9.84916V21.1508C1.9375 25.5023 5.49766 29.0625 9.84916 29.0625H21.1508C25.5023 29.0625 29.0625 25.5023 29.0625 21.1508V9.84916C29.0625 5.49766 25.5023 1.9375 21.1508 1.9375Z" fill="currentColor"/>
-                  <path d="M22.8462 9.84961C22.5109 9.84961 22.1831 9.75018 21.9043 9.5639C21.6255 9.37762 21.4082 9.11284 21.2799 8.80307C21.1516 8.49329 21.118 8.15242 21.1834 7.82356C21.2488 7.4947 21.4103 7.19262 21.6474 6.95553C21.8845 6.71844 22.1866 6.55697 22.5154 6.49156C22.8443 6.42615 23.1851 6.45972 23.4949 6.58803C23.8047 6.71635 24.0695 6.93364 24.2558 7.21243C24.442 7.49123 24.5415 7.819 24.5415 8.1543C24.5419 8.37706 24.4984 8.59773 24.4134 8.80363C24.3284 9.00953 24.2035 9.19661 24.046 9.35413C23.8885 9.51165 23.7014 9.63651 23.4955 9.72154C23.2896 9.80657 23.0689 9.85009 22.8462 9.84961ZM15.5 10.9794C16.3942 10.9794 17.2683 11.2446 18.0118 11.7413C18.7552 12.2381 19.3347 12.9442 19.6769 13.7703C20.0191 14.5964 20.1086 15.5055 19.9342 16.3825C19.7597 17.2595 19.3291 18.065 18.6969 18.6973C18.0646 19.3296 17.259 19.7602 16.382 19.9346C15.505 20.1091 14.596 20.0195 13.7699 19.6773C12.9438 19.3352 12.2377 18.7557 11.7409 18.0122C11.2441 17.2687 10.979 16.3946 10.979 15.5004C10.9802 14.3018 11.457 13.1526 12.3046 12.305C13.1521 11.4574 14.3013 10.9807 15.5 10.9794ZM15.5 8.7192C14.1588 8.7192 12.8477 9.11691 11.7325 9.86205C10.6174 10.6072 9.7482 11.6663 9.23494 12.9054C8.72169 14.1445 8.5874 15.508 8.84905 16.8234C9.11071 18.1388 9.75656 19.3471 10.7049 20.2955C11.6533 21.2439 12.8616 21.8897 14.177 22.1514C15.4925 22.4131 16.856 22.2788 18.0951 21.7655C19.3342 21.2523 20.3933 20.3831 21.1384 19.2679C21.8835 18.1527 22.2813 16.8417 22.2813 15.5004C22.2813 13.702 21.5668 11.9771 20.2951 10.7054C19.0233 9.43365 17.2985 8.7192 15.5 8.7192Z" fill="currentColor"/>
-                  </svg>
-                </a></li>
-                <li><a href="#"><svg width="26" height="31" viewBox="0 0 26 31" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M24.1429 1.9375H1.85134C0.829911 1.9375 0 2.81543 0 3.89316V27.1068C0 28.1846 0.829911 29.0625 1.85134 29.0625H24.1429C25.1643 29.0625 26 28.1846 26 27.1068V3.89316C26 2.81543 25.1643 1.9375 24.1429 1.9375ZM7.85804 25.1875H4.00446V12.2426H7.86384V25.1875H7.85804ZM5.93125 10.4746C4.69509 10.4746 3.69687 9.42715 3.69687 8.14355C3.69687 6.85996 4.69509 5.8125 5.93125 5.8125C7.16161 5.8125 8.16562 6.85996 8.16562 8.14355C8.16562 9.4332 7.16741 10.4746 5.93125 10.4746ZM22.3031 25.1875H18.4496V18.8906C18.4496 17.3891 18.4205 15.4576 16.4473 15.4576C14.4393 15.4576 14.1317 17.0924 14.1317 18.7816V25.1875H10.2781V12.2426H13.975V14.0105H14.0272C14.5437 12.9934 15.8031 11.9217 17.6777 11.9217C21.5777 11.9217 22.3031 14.6039 22.3031 18.0914V25.1875Z" fill="currentColor"/>
-                  </svg></a></li>
-                <li><a href="#"><svg width="29" height="30" viewBox="0 0 29 30" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9.6998 23.2852C9.6998 23.4023 9.56532 23.4961 9.39577 23.4961C9.20282 23.5137 9.06835 23.4199 9.06835 23.2852C9.06835 23.168 9.20282 23.0742 9.37238 23.0742C9.54778 23.0566 9.6998 23.1504 9.6998 23.2852ZM7.88145 23.0215C7.84052 23.1387 7.95746 23.2734 8.13286 23.3086C8.28488 23.3672 8.46028 23.3086 8.49536 23.1914C8.53044 23.0742 8.41935 22.9395 8.24395 22.8867C8.09194 22.8457 7.92238 22.9043 7.88145 23.0215ZM10.4657 22.9219C10.2962 22.9629 10.1792 23.0742 10.1968 23.209C10.2143 23.3262 10.3663 23.4023 10.5417 23.3613C10.7113 23.3203 10.8282 23.209 10.8107 23.0918C10.7931 22.9805 10.6353 22.9043 10.4657 22.9219ZM14.3129 0.46875C6.20343 0.46875 0 6.63867 0 14.7656C0 21.2637 4.08105 26.8242 9.91028 28.7812C10.6587 28.916 10.9218 28.4531 10.9218 28.0723C10.9218 27.709 10.9042 25.7051 10.9042 24.4746C10.9042 24.4746 6.81149 25.3535 5.95202 22.7285C5.95202 22.7285 5.28548 21.0234 4.32661 20.584C4.32661 20.584 2.9877 19.6641 4.42016 19.6816C4.42016 19.6816 5.87601 19.7988 6.67702 21.1934C7.95746 23.4551 10.1032 22.8047 10.9393 22.418C11.0738 21.4805 11.4538 20.8301 11.8748 20.4434C8.60645 20.0801 5.30887 19.6055 5.30887 13.9688C5.30887 12.3574 5.75323 11.5488 6.68871 10.5176C6.53669 10.1367 6.03972 8.56641 6.84073 6.53906C8.0627 6.1582 10.875 8.12109 10.875 8.12109C12.0444 7.79297 13.3014 7.62305 14.5468 7.62305C15.7921 7.62305 17.0492 7.79297 18.2185 8.12109C18.2185 8.12109 21.0308 6.15234 22.2528 6.53906C23.0538 8.57227 22.5569 10.1367 22.4048 10.5176C23.3403 11.5547 23.9133 12.3633 23.9133 13.9688C23.9133 19.623 20.4696 20.0742 17.2012 20.4434C17.7391 20.9062 18.1952 21.7852 18.1952 23.1621C18.1952 25.1367 18.1776 27.5801 18.1776 28.0605C18.1776 28.4414 18.4466 28.9043 19.1891 28.7695C25.0359 26.8242 29 21.2637 29 14.7656C29 6.63867 22.4224 0.46875 14.3129 0.46875ZM5.68306 20.6777C5.60706 20.7363 5.6246 20.8711 5.72399 20.9824C5.81754 21.0762 5.95202 21.1172 6.02802 21.041C6.10403 20.9824 6.08649 20.8477 5.9871 20.7363C5.89355 20.6426 5.75907 20.6016 5.68306 20.6777ZM5.05161 20.2031C5.01069 20.2793 5.06915 20.373 5.18609 20.4316C5.27964 20.4902 5.39657 20.4727 5.4375 20.3906C5.47843 20.3145 5.41996 20.2207 5.30302 20.1621C5.18609 20.127 5.09254 20.1445 5.05161 20.2031ZM6.94597 22.2891C6.85242 22.3652 6.8875 22.541 7.02198 22.6523C7.15645 22.7871 7.32601 22.8047 7.40202 22.7109C7.47802 22.6348 7.44294 22.459 7.32601 22.3477C7.19738 22.2129 7.02198 22.1953 6.94597 22.2891ZM6.27944 21.4277C6.18589 21.4863 6.18589 21.6387 6.27944 21.7734C6.37298 21.9082 6.53085 21.9668 6.60685 21.9082C6.7004 21.832 6.7004 21.6797 6.60685 21.5449C6.525 21.4102 6.37298 21.3516 6.27944 21.4277Z" fill="currentColor"/>
-                  </svg>
-                </a></li>
-              </ul>
-            </div>
 
-            <div class="carousel-btn">
-              <ul>
-                <li><i class="fa-solid fa-circle active"></i></li>
-                <li><i class="fa-regular fa-circle"></i></li>
-                <li><i class="fa-regular fa-circle"></i></li>
-                <li><i class="fa-regular fa-circle"></i></li>
-              </ul>
-            </div>
-
-            </div> 
-
-
-             <div class="intro-img">
-              <img src="./img/main-img2.jpg" alt="ME">
-             </div> 
-
-             
-
-          </div>
-        </div>
-
-        
-
-         
-      </section>
-
-      <section class="project-section">
-        <div class="container">
-          <h1 class="text-accent-400 fw-bold fs-primary-heading">MY PROJECTS</h1>
-          <div class="three-columns">
-            <div class="card">
-              <img src="./img/main-img2.jpg" alt="">
-              <h5 class="text-neutral-100 fw-semi-bold">Portfolio</h5>
-              <p class="text-neutral-100 fw-light">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-              <div class="technologies">
-                <a href="#">HTML</a>
-                <a href="#">CSS</a>
-              </div>
-              <h5 class="text-neutral-100 fw-semi-bold">Guthub</h5>
-              <a href="https://github.com/ItonRomero/MyPortfolio">https://github.com/ItonRomero/MyPortfolio</a>
-            </div>
-
-            <div class="card">
-              <img src="./img/main-img2.jpg" alt="">
-              <h5 class="text-neutral-100 fw-semi-bold">Portfolio</h5>
-              <p class="text-neutral-100 fw-light">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-              <div class="technologies">
-                <a href="#">HTML</a>
-                <a href="#">CSS</a>
-              </div>
-              <h5 class="text-neutral-100 fw-semi-bold">Guthub</h5>
-              <a href="https://github.com/ItonRomero/MyPortfolio">https://github.com/ItonRomero/MyPortfolio</a>
-            </div>
-
-            <div class="card">
-              <img src="./img/main-img2.jpg" alt="">
-              <h5 class="text-neutral-100 fw-semi-bold">Portfolio</h5>
-              <p class="text-neutral-100 fw-light">Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla porttitor accumsan tincidunt. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
-              <div class="technologies">
-                <a href="#">HTML</a>
-                <a href="#">CSS</a>
-              </div>
-              <h5 class="text-neutral-100 fw-semi-bold">Guthub</h5>
-              <a href="https://github.com/ItonRomero/MyPortfolio">https://github.com/ItonRomero/MyPortfolio</a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      <section class="aboutme-section">
-        <div class="container">
-          <h1 class="text-accent-400 fw-bold fs-primary-heading">ABOUT ME</h1>
-          <div class="even-columns">
-            <div>
-              <img src="./img/main-img2.jpg" alt="ME">
-            </div> 
-            <div>
-              <p class="text-neutral-100 fw-light">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
-              <a href="#">My resume</a>
-              <div class="technologies">
-                <a href="#">HTML</a>
-                <a href="#">CSS</a>
-                <a href="#">CSS</a>
-                <a href="#">CSS</a>
-                <a href="#">CSS</a>
-                <a href="#">CSS</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-        <section class="contactme-section">
-          <div class="container">
-            <h1 class="text-accent-400 fw-bold fs-primary-heading">CONTACT ME</h1>
-            <p class="text-neutral-100 fw-light">Got a question or proposal, or just want
-                  to say hello? Go ahead.</p>
-              
-               
-              
-          </div>
-      </section>
-
-
-
-    </main>
+  
+   
 
 
 
 
 
 
-
-    <script src="/main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
