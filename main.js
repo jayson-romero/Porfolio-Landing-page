@@ -18,23 +18,70 @@ $(document).ready(function(){
     })
 
 
-  //   $("#light-mode-toggle").click(function(){
+    $('#light-mode-toggle').click(function(){
+     
+      let img = $('#menu-bg').attr('src')
+      console.log(img)
+      
+        if(img === "img/bg-dark-small.jpg") {
+          $('#menu-bg').attr('src', "img/bg-light-small.jpg");
+          console.log(screen.width)
+        }
+
+        if(img === "img/bg-light-small.jpg") {
+          $('#menu-bg').attr('src', "img/bg-dark-small.jpg");
+        }
+
+        if(img === "img/bg-dark-big.jpg") {
+          $('#menu-bg').attr('src', "img/bg-light-big.jpg");
+          console.log(screen.width)
+        }
+
+        if(img === "img/bg-light-big.jpg") {
+          $('#menu-bg').attr('src', "img/bg-dark-big.jpg");
+        }
+
+        if(img === "img/bg-light-small.jpg" && screen.width > 569) {
+          $('#menu-bg').attr('src', "img/bg-light-big.jpg");
+        }
+
+        if(img === "img/bg-dark-small.jpg" && screen.width > 596) {
+          $('#menu-bg').attr('src', "img/bg-dark-big.jpg");
+        }
+        if(img === "img/bg-light-big.jpg" && screen.width > 569) {
+          $('#menu-bg').attr('src', "img/bg-light-big.jpg");
+        }
+
+        if(img === "img/bg-dark-small.jpg" && screen.width > 569) {
+          $('#menu-bg').attr('src', "img/bg-dark-big.jpg");
+        }
+        // if ($('#menu-bg').attr('src') === "img/bg-dark-small.jpg") {
+        //   $('#menu-bg').attr('src', "img/bg-light-small.jpg");
+        // } 
+        // else {
+        //   $('#menu-bg').attr('src', "img/bg-light-small.jpg");
+        // } 
+      
+    })
+
+
+
     
-  //     var img = $("#menu-bg");
-
-  //     if (img.src = "img/bg-dark-big.jpg"){
-  //       img.attr("src",'img/bg-light-big.jpg')
-  //     } 
+      // var bgImage = document.querySelector('#menu-bg')
       
+      // if (bgImage.getAttribute("src") === "img/bg-dark-small.jpg") {
+      //   bgImage.src = "img/bg-light-small.jpg";
+      // } 
     
+      // if (bgImage.getAttribute("src") === "img/bg-light-small.jpg") {
+      //   bgImage.src = "img/bg-dark-small.jpg";
+      // } 
+    
+      // if (bgImage.getAttribute("src") === "img/bg-dark-big.jpg") {
+      //   bgImage.src = "img/bg-small-big.jpg";
+      // } 
+     
       
-      
-  //     else {
-  //       img.attr("src",'img/bg-dark-big.jpg')
-  //       }
-
-
-  // });
 
 
 
@@ -93,22 +140,22 @@ let lightMode = localStorage.getItem('lightMode');
 const lightModeToggle = document.querySelector('#light-mode-toggle');
 
 
-  const updateImage = () => {
-  var bgImage = document.querySelector('#menu-bg')
+  // const updateImage = () => {
+  // var bgImage = document.querySelector('#menu-bg')
   
-  if (bgImage.getAttribute("src") == "img/bg-dark-big.jpg") {
-    bgImage.src = "img/bg-light-big.jpg";
-  } 
+  // if (bgImage.getAttribute("src") === "img/bg-dark-small.jpg") {
+  //   bgImage.src = "img/bg-light-small.jpg";
+  // } 
 
-  else if (bgImage.getAttribute("src") == "img/bg-light-big.jpg") {
-    bgImage.src = "img/bg-dark-big.jpg";
-  } 
+  // if (bgImage.getAttribute("src") === "img/bg-light-small.jpg") {
+  //   bgImage.src = "img/bg-dark-small.jpg";
+  // } 
 
- if (bgImage.getAttribute("src") === "img/bg-dark-small.jpg") {
-    bgImage.src = "img/bg-light-small.jpg";
-  }
+  // if (bgImage.getAttribute("src") === "img/bg-dark-big.jpg") {
+  //   bgImage.src = "img/bg-small-big.jpg";
+  // } 
  
-  }
+  // }
 
 
 
@@ -151,14 +198,14 @@ lightModeToggle.addEventListener('click', () => {
     enableLightMode();
     toggleIcon.classList.remove("fa-toggle-off")
     toggleIcon.classList.add("fa-toggle-on")
-    updateImage(); 
+    // updateImage(); 
    
   // if it has been enabled, turn it off  
   } else {  
     disableLightMode();
     toggleIcon.classList.remove("fa-toggle-on")
     toggleIcon.classList.add("fa-toggle-off")
-    updateImage(); 
+    // updateImage(); 
     
   }
 });

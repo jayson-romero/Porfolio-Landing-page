@@ -320,29 +320,50 @@ svg {
  }
 }
 
+.social-media {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.social-media li{
+   margin: 1rem;
+   font-size: 2rem;
+   cursor: pointer;
+  
+}
+
+.social-media li:hover{
+  color: var(--clr-accent-400);
+ 
+}
+
+
+
 
 @media (max-width: 47.3em) {
   /* change background images for main */
-   .home img {
+   /* .home img {
          content: url("img/bg-dark-small.jpg");
-    } 
+    }  */
  
- 
+  
    } 
  
 
 
 @media (min-width: 47.4em) {
- /* change background images for main */
-  /* .home img {
-        content: url("img/bg-dark-big.jpg"); */
-  /* } */
+ /*change background images for main */
+   .home img {
+        content: url("img/bg-dark-big.jpg"); 
+ } 
 
  /* Change position of Primary Heading  */
   .home .container {
     justify-content: start;
   } 
 
+ 
 
  
 }
@@ -369,5 +390,13 @@ svg {
     margin-left: clamp(5rem, 5rem + 50vw ,10rem);
     
   } 
+
+  .social-media {
+    display: block;
+    position: fixed;
+    top: 40vh;
+    left: 1rem;
+   }
+
 }
 
