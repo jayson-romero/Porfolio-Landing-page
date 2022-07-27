@@ -97,6 +97,7 @@ body {
 .lightmode {
   --clr-background: var(--clr-neutral-100);
   --clr-foreground: var(--clr-neutral-700);
+  
 }
 
 body {
@@ -253,7 +254,7 @@ svg {
  }
 
  .home .container {
-  text-align: center;
+  text-align: center; 
   display: flex;
   justify-content: center;
 } 
@@ -280,46 +281,6 @@ svg {
 }
 
 
-/* MEDIA QUERY */
-
-@media (min-width: 20em) {
- 
-}
-
-@media (max-width: 42em) {
-
-  .menu-btn {
-    display: block;
-  } 
-
-  .menu-btn i.active {
-    content: "\f00d";
-  }
- 
-  .navbar .menu {
-    position: fixed;
-    height: 20rem;
-    width: 16rem;
-    top: 4rem;
-    right: -100%;
-    background: var(--clr-background);
-    text-align: center;
-    transition: all 0.3s ease;
-  }
-
-   .navbar .menu.active {
-    right: 1.5rem;
-  } 
-  .navbar .menu li {
-     display: block;
-     margin: 0;
-  }
-  .navbar .menu li a{
-    display: inline-block;
-    margin: 20px 0;
- }
-}
-
 .social-media {
   list-style: none;
   display: flex;
@@ -339,6 +300,52 @@ svg {
 }
 
 
+.home .d-small {
+  content: url("img/bg-dark-small.jpg");
+}
+
+.home .l-small {
+  content: url("img/bg-light-small.jpg");
+}
+
+
+/* MEDIA QUERY */
+
+@media (min-width: 20em) {
+ 
+}
+
+@media (max-width: 42em) {
+
+  .menu-btn {
+    display: block;
+  } 
+
+ 
+  .navbar .menu {
+    position: fixed;
+    height: 20rem;
+    width: 16rem;
+    top: 4rem;
+    right: -200%;
+    background: var(--clr-background);
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+   .navbar .menu.active {
+    right: 1.5rem;
+  } 
+  .navbar .menu li {
+     display: block;
+     margin: 0;
+  }
+  .navbar .menu li a{
+    display: inline-block;
+    margin: 20px 0;
+ }
+}
+
 
 
 @media (max-width: 47.3em) {
@@ -354,13 +361,22 @@ svg {
 
 @media (min-width: 47.4em) {
  /*change background images for main */
-   .home img {
+    .home .d-small {
         content: url("img/bg-dark-big.jpg"); 
- } 
+      
+ }  
+ 
+ .home .l-small{
+  content: url("img/bg-light-big.jpg"); 
+
+}  
 
  /* Change position of Primary Heading  */
   .home .container {
     justify-content: start;
+    text-align: left; 
+     
+    
   } 
 
  
