@@ -16,6 +16,9 @@
     <!-- JQuery -->
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/> 
   </head>
   <body>
     
@@ -24,9 +27,9 @@
             <div class="container">
                 <div class="logo fs-lg-bold fs-logo"><a href="#">ITON</a></div>
                 <ul class="menu fw-light-bold">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Portfolio</a></li>
-                  <li><a href="#">About</a></li>
+                  <li><a href="#home">Home</a></li>
+                  <li><a href="#project">Portfolio</a></li>
+                  <li><a href="#about">About</a></li>
                   <li><a href="#">Contact</a></li>
                   <li><button id="light-mode-toggle" class="light-mode-toggle" ><i class="fa-solid fa-toggle-off" id="toggle-icon"></i></button></li>
                 </ul>
@@ -46,49 +49,88 @@
                           <li><i class="fa-brands fa-github"></i></li>
                         </ul>
                   </div>
-                  <!-- <ul class="social-media">
-                    <li><i class="fa-brands fa-instagram"></i></li>
-                    <li><i class="fa-brands fa-linkedin"></i></li>
-                    <li><i class="fa-brands fa-github"></i></li>
-                  </ul> -->
             </div>
 
             <img class="menu-bg d-small" src="img/bg-dark-small.jpg" alt="">
-      </section>  
-      
-      
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit enim explicabo asperiores deserunt, repudiandae pariatur inventore. Minima voluptatibus veniam nihil adipisci officiis tempora temporibus quo incidunt iure maiores minus rerum dignissimos vero cum reiciendis voluptatum, dolore alias aliquam dolorem odio tempore nulla sed? Libero consectetur earum molestias! Repellendus voluptate consectetur ex veniam perferendis facilis quas odit ullam quidem veritatis pariatur doloremque recusandae sint, iure quod harum accusamus. Perspiciatis obcaecati adipisci corporis autem nam cumque, amet at quaerat culpa dolorem vitae nihil explicabo officiis repellendus deleniti dignissimos quasi hic corrupti voluptatem earum ullam quae soluta aspernatur dicta. Quod impedit culpa ut veniam provident earum atque necessitatibus. Ut, cumque quidem rerum sit rem veniam magni omnis odio recusandae. Corporis harum doloremque nostrum saepe et, culpa tempora. Voluptatum voluptatibus veniam cumque ex? Sequi quibusdam aliquid voluptatum voluptates ab quidem doloremque tempora est eius cumque debitis ipsam enim, fugiat consequatur nisi quam modi amet nobis reprehenderit corporis blanditiis, eos voluptatem. Eum quod, esse nulla explicabo, magnam quae quibusdam, voluptatum nihil possimus quaerat labore dolorem nam rerum omnis odit inventore. Exercitationem ducimus, molestiae praesentium itaque nisi, delectus illo alias sit incidunt ipsa recusandae facilis officiis? Nesciunt alias nemo cum quia placeat temporibus minus ad velit!</p>
-      
-      
-      
-      <!-- <section class="primary-header">
-        <div class="container">
-          <div class="main-header">
-           <a href="#" class="logo"><svg width="85" height="27" viewBox="0 0 85 27"  fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path d="M7.072 0.619998V26H0.0160001V0.619998H7.072ZM30.2062 0.619998V6.236H23.4382V26H16.3822V6.236H9.68622V0.619998H30.2062ZM44.9848 26.252C42.6088 26.252 40.4248 25.7 38.4328 24.596C36.4408 23.468 34.8568 21.92 33.6808 19.952C32.5288 17.96 31.9528 15.716 31.9528 13.22C31.9528 10.724 32.5288 8.492 33.6808 6.524C34.8568 4.532 36.4408 2.984 38.4328 1.88C40.4248 0.775999 42.6088 0.223999 44.9848 0.223999C47.3848 0.223999 49.5688 0.775999 51.5368 1.88C53.5288 2.984 55.1008 4.532 56.2528 6.524C57.4048 8.492 57.9808 10.724 57.9808 13.22C57.9808 15.716 57.4048 17.96 56.2528 19.952C55.1008 21.92 53.5288 23.468 51.5368 24.596C49.5448 25.7 47.3608 26.252 44.9848 26.252ZM44.9848 19.7C46.7848 19.7 48.2008 19.112 49.2328 17.936C50.2888 16.76 50.8168 15.188 50.8168 13.22C50.8168 11.204 50.2888 9.62 49.2328 8.468C48.2008 7.292 46.7848 6.704 44.9848 6.704C43.1608 6.704 41.7328 7.292 40.7008 8.468C39.6688 9.62 39.1528 11.204 39.1528 13.22C39.1528 15.212 39.6688 16.796 40.7008 17.972C41.7328 19.124 43.1608 19.7 44.9848 19.7ZM84.6607 26H77.6047L68.2087 11.816V26H61.1527V0.619998H68.2087L77.6047 14.984V0.619998H84.6607V26Z"  fill="currentColor"/>
-            </svg></a>
-           <i class="fa-solid fa-bars menu-btn" onclick="hideNavBar()"></i>
-           <div id="main-menu nav">
-              <ul role="list" class="primary-nav hide">
-                <li><a href="#">Project</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><button id="light-mode-toggle" class="light-mode-toggle"><i class="fa-solid fa-toggle-off" id="toggle-icon"></i></button></li>
-     
-              </ul>
-           </div>
-          </div>
-         
-        </div>
-      </section> -->
+      </section>    
     </header>
         
 
+      <!-- Project section start -->
+      <main>
 
-  
+        <section class="projects" id="project">
+          <div class="container">
+            <h1 class="fs-primary-heading fw-bold">My <span>Projects</span></h1>
+                <div class="project-content">
+                  <div class="carousel owl-carousel">
+                    <div class="card">
+                        <div class="box">
+                            <img src="img/portfolio-project.jpeg" alt="">
+                            <div class="text fw-semi-bold">Someone name</div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="img/FasionWeb-project.jpeg" alt="">
+                            <div class="text fw-semi-bold">Someone name</div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>  
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="img/JavaScriptGames-Project.jpeg" alt="">
+                            <div class="text fw-semi-bold">Someone name</div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="img/main-img2.jpg" alt="">
+                            <div class="text fw-semi-bold">Someone name</div>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="box">
+                            <img src="img/main-img2.jpg" alt="">
+                            <div class="text fw-semi-bold">Someone name</div>
+                            <p>orem ipsum dolor sit amLet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+          </div>
+        </section>  
+
    
 
+        <section class="about" id="about">
+          <div class="container">
+            <h1 class="fs-primary-heading fw-bold"><span>About</span> me</h1>
+            <div class="about-content">
+                <div class="column left">
+                    <img src="img/main-img2.jpg" alt="">
+                </div>
+                <div class="column right">
+                    <div class="text fw-bold">I'm Jayson Romero</div>
+                    <p>I am a front end developer originally from Bohol and Puerto Princesa City, Palawan and based in Quezon City with over 16 years of experience in the industry. I am a passionate creative.  I seek to inspire, and build the best work possible. I am a critical thinker and also a problem solver, I make sure every aspect of my project is produced at the highest quality.</p>
+                    <a href="#">Download CV</a>
+                </div> 
+            </div> 
 
+
+          </div>
+        </section>
+
+
+
+
+      </main>
+   
+
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ut voluptatum eveniet doloremque autem excepturi eaque, sit laboriosam voluptatem nisi delectus. Facere explicabo hic minus accusamus alias fuga nihil dolorum quae. Explicabo illo unde, odio consequatur ipsam possimus veritatis, placeat, ab molestiae velit inventore exercitationem consequuntur blanditiis omnis beatae. Dolor iste excepturi ratione soluta quas culpa voluptatum repudiandae harum non.</p>
 
 
 

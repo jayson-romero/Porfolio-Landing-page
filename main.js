@@ -15,6 +15,31 @@ $(document).ready(function(){
         $(this).find('svg').toggleClass('fa-solid fa-bars fa-solid fa-xmark');
     })
 
+
+    //owl carousel script
+    $('.carousel').owlCarousel({
+
+      margin: 20,
+      loop: true,
+      autoplayTimeOut: 2000,
+      autoplayHoverPause: true,
+      responsive: {
+        0:{
+          items: 1,
+          nav: false
+        },
+        600:{
+          items: 2,
+          nav: false
+        },
+        1000:{
+          items: 3,
+          nav: false
+        }
+      }
+
+    });
+
 });
 
 
@@ -26,7 +51,9 @@ const lightModeToggle = document.querySelector('#light-mode-toggle');
 const enableLightMode = () => {
   //const currentScreenSize = screen.width 
   const menuBg = document.querySelector('.menu-bg')
-  console.log(menuBg)
+ 
+ 
+
   // 1. Add the class to the body
   document.body.classList.add('lightmode');
  
@@ -35,6 +62,10 @@ const enableLightMode = () => {
 
   //3. Change image per screen size
   menuBg.classList.add('l-small')
+
+   //3. Change card color 
+ 
+
   // console.log(currentScreenSize)
   // if(currentScreenSize < 761 ) {
   //   menuBg.setAttribute('src', 'img/bg-light-small.jpg');   
@@ -47,16 +78,17 @@ const enableLightMode = () => {
 const disableLightMode = () => {
  // const currentScreenSize = screen.width 
   const menuBg = document.querySelector('.menu-bg')
-  console.log(menuBg)
+ 
   // 1. Remove the class from the body
   document.body.classList.remove('lightmode');
-
+  
   // 2. Update darkMode in localStorage 
   localStorage.setItem('lightMode', null);
 
   //3. Change image per screen size
     menuBg.classList.remove('l-small')
 
+  
   // console.log(currentScreenSize)
   // if(currentScreenSize < 761 ) {
   //   menuBg.setAttribute('src', 'img/bg-dark-small.jpg');   
@@ -105,3 +137,5 @@ lightModeToggle.addEventListener('click', () => {
     backSpeed: 60,
     loop: true
 });
+
+
