@@ -177,7 +177,7 @@ svg {
 
 .container {
 
-   --max-width: 1596px;
+   --max-width: 1300px;
    --padding: 3rem;
  
     width: min(var(--max-width), 100% - var(--padding));
@@ -297,11 +297,19 @@ svg {
   
 }
 
-.social-media li:hover{
-  color: var(--clr-accent-400);
+.social-media li:hover {
   transform: scale(1.5);
- 
 }
+
+.social-media li a {
+  text-decoration: none;
+  color: var(--clr-foreground);
+}
+
+.social-media li a:hover {
+  color: var(--clr-accent-400);
+}
+
 
 
 .home .d-small {
@@ -357,8 +365,9 @@ h1 span {
 }
 
 .projects .carousel .card img{
-    height: 400px;
-    width: 600px;
+    height: 300px;
+    width: 400px;
+    padding-top: 1rem;
     object-fit: cover;
     border: 2px solid var(--clr-contentbackground); 
     transition: all 0.3s ease;
@@ -453,6 +462,26 @@ h1 span {
     color: var(--clr-foreground);
     background: none;
 }
+
+.about .about-content .about-technology {
+   list-style: none;
+}
+
+.about .about-content .about-technology li{
+  display: inline-block;
+}
+
+
+
+/* CONTACT SECTIONS */
+.contact .contact-content .column {
+  width: calc(50% - 30px);
+}
+
+.contact .contact-content .left p{
+  text-align: justify;
+}
+
 
 
 /* MEDIA QUERY */
