@@ -12,7 +12,7 @@ $(document).ready(function(){
     // toggle menu/navbar 
     $('.menu-btn').click(function(){
         $('.navbar .menu').toggleClass("active")
-        $(this).find('svg').toggleClass('fa-solid fa-bars fa-solid fa-xmark');
+        $('.menu-btn').find('svg').toggleClass('fa-solid fa-bars fa-solid fa-xmark');
     })
 
 

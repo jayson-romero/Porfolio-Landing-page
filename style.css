@@ -83,7 +83,7 @@ ol[role='list'] {
 }
 
 /* Set core root defaults */
-html:focus-within {
+html {
   scroll-behavior: smooth;
 }
 
@@ -195,6 +195,7 @@ svg {
     color: var(--clr-foreground);
     transition: all 0.3s ease;
     /* background: var(--clr-foreground); */
+ 
  }
 
  .navbar.sticky {
@@ -221,6 +222,7 @@ svg {
 }
 
 .navbar .menu li a{
+  /* display: block; */
   text-decoration: none;
   color: var(--clr-foreground);
   transition: color 0.3s ease;
@@ -245,6 +247,7 @@ svg {
   font-size: 20px;
   cursor: pointer;
   display: none;
+
 }
 
 
@@ -474,6 +477,17 @@ h1 span {
 
 
 /* CONTACT SECTIONS */
+.contact  {
+  padding-top: clamp(100px , 1rem + 5vw ,180px);
+  padding-bottom: 150px;
+}
+
+.contact .contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
 .contact .contact-content .column {
   width: calc(50% - 30px);
 }
@@ -481,8 +495,99 @@ h1 span {
 .contact .contact-content .left p{
   text-align: justify;
 }
+.contact .contact-content .text {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.contact .contact-content .left .icons{
+  margin: 10px 0;
+}
+.contact .contact-content .row{
+  display: flex;
+  height: 65px;
+  align-items: center;
+}
+.contact .contact-content .row .info {
+  margin-left: 30px;
+}
+.contact .contact-content .row i{
+  font-size: 25px;
+}
+.contact .contact-content .info .head {
+  font-weight: var(--fw-bold);
+}
+.contact .right form .fields {
+  display: flex;
+}
+.contact .right form .field,
+.contact .right form .fields .fields {
+  height: 45px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.contact .right form .textarea {
+  height: 80px;
+  width: 100%;
+}
 
+.contact .right form .name {
+  margin-right: 10px ;
+}
+.contact .right form .email {
+  margin-left: 10px ;
+}
+.contact .right form .field input,
+.contact .right form .textarea textarea {
+  height: 100%;
+  width: 100%;
+  border: 1px solid lightgray ;
+  border-radius: 6px;
+  outline: none;
+  padding: 0 15px;
+  font-size:  17px;
 
+}
+.contact .right form .textarea textarea {
+  padding-top: 10px;
+  resize: none;
+}
+
+.contact .right form .button {
+  height: 47px;
+  width: 170px;
+}
+.contact .right form .button button {
+  height: 100%;
+  width: 100%;
+  border: 2px solid var(--clr-accent-400);
+  background: var(--clr-accent-400);
+  font-size: 17px;
+  color: #202020;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact .right form .button button:hover {
+  color: var(--clr-accent-400);
+  background: none;
+}
+
+/* Footer Section */
+footer {
+  background: var(--clr-contentbackground) ;
+  padding: 20px 23px;
+  text-align: center;
+}
+
+footer span a {
+    color: var(--clr-accent-400);
+    text-decoration: none;
+}
+footer span a:hover {
+  color: var(--clr-accent-400);
+  text-decoration: underline;
+}
 
 /* MEDIA QUERY */
 
@@ -509,6 +614,7 @@ h1 span {
     right: -200%;
     background: var(--clr-background);
     text-align: center;
+    border: 1px solid var(--clr-contentbackground);
     transition: all 0.3s ease;
   }
 
@@ -540,7 +646,9 @@ h1 span {
          content: url("img/bg-dark-small.jpg");
     }  */
     
-      .about .about-content .column {
+      .about .about-content .column,
+      .contact .contact-content .column 
+      {
           width: 100%;
       }
       
