@@ -222,8 +222,9 @@ svg {
 }
 
 .navbar .menu li a{
-  /* display: block; */
+   display: block; 
   text-decoration: none;
+  font-size: 20px;
   color: var(--clr-foreground);
   transition: color 0.3s ease;
 }
@@ -466,13 +467,79 @@ h1 span {
     background: none;
 }
 
-.about .about-content .about-technology {
-   list-style: none;
+
+.about .about-content .tab-titles {
+  display: flex;
+  margin:  15px 0 50px;
 }
 
-.about .about-content .about-technology li{
-  display: inline-block;
+.about .about-content .tab-titles .tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
 }
+
+.tab-links::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background: var(--clr-accent-400);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s ;
+}
+
+.tab-links.active-link::after {
+    width: 50% ;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+   color: var(--clr-accent-400);
+}
+
+.tab-contents.technology ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tab-contents ul li svg {
+  font-size: 50px;
+}
+
+.tab-contents.trainings ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.tab-contents.trainings ul li{
+  margin-right: 5px;
+}
+
+
+.tab-contents.trainings ul li img{
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
 
 
 
@@ -599,7 +666,7 @@ footer span a:hover {
  }
 }
 
-@media (max-width: 42em) {
+@media (max-width: 44em) {
 
   .menu-btn {
     display: block;
@@ -628,6 +695,7 @@ footer span a:hover {
   .navbar .menu li a{
     display: inline-block;
     margin: 20px 0;
+
  }
 }
 
@@ -641,11 +709,7 @@ footer span a:hover {
 
 
 @media (max-width: 893px) {
-  /* change background images for main */
-   /* .home img {
-         content: url("img/bg-dark-small.jpg");
-    }  */
-    
+ 
       .about .about-content .column,
       .contact .contact-content .column 
       {
@@ -684,28 +748,9 @@ footer span a:hover {
     text-align: left; 
       
   } 
-
-  
-
 }
 
  
-
-@media (min-width: 60em) {
- 
-}
-
-@media (min-width: 75em) {
-
-}
-
-@media (min-width: 100em) {
- 
-}
-
-@media (min-width: 120em) {
- 
-}
 
 
 @media (min-width: 1300px) {
